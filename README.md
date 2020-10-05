@@ -12,9 +12,15 @@
 ```
 
 如果不是根目录的话要去`/live2d-girl/assets/autoload.js`改一下路径
+
 **注意：自建API需要PHP>=5.2并且安装了PHP的json扩展**
+
 如果不想自建API需要在`/live2d-girl/assets/autoload.js`里把下面这句删掉就会使用原作者提供的API
+
 `live2d_settings['modelAPI'] = '/live2d-girl/api/';   // 自建 API 修改这里`
+
 其他自定义配置请阅读原作者的两个仓库的README：
+
 https://github.com/fghrsh/live2d_demo
+
 https://github.com/fghrsh/live2d_api
