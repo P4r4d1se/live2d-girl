@@ -1,0 +1,12 @@
+{
+    "models": [
+        "Potion-Maker/Pio",
+        "Potion-Maker/Tia",
+		"Add/Platelet"
+    ],
+    "messages": [
+        "来自 Potion Maker 的 Pio 酱 ~",
+        "来自 Potion Maker 的 Tia 酱 ~",
+        "这里是血小板哦 ~"
+    ]
+}

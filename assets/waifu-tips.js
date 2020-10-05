@@ -67,7 +67,7 @@ live2d_settings['waifuDraggableRevert'] = true;         // 松开鼠标还原拖
 live2d_settings['l2dVersion']           = '1.4.2';        // 当前版本
 live2d_settings['l2dVerDate']           = '2018.11.12'; // 版本更新日期
 live2d_settings['homePageUrl']          = 'auto';       // 主页地址，可选 'auto'(自动), '{URL 网址}'
-live2d_settings['aboutPageUrl']         = 'https://www.fghrsh.net/post/123.html';   // 关于页地址, '{URL 网址}'
+live2d_settings['aboutPageUrl']         = 'https://github.com/P4r4d1se/live2d-girl';   // 关于页地址, '{URL 网址}'
 live2d_settings['screenshotCaptureName']= 'live2d.png'; // 看板娘截图文件名，例如 'live2d.png'
 
 /****************************************************************************************************/
@@ -151,7 +151,7 @@ function initModel(waifuPath, type) {
         else $(".waifu").css("transition", 'all .3s ease-in-out');
     } catch(err) { console.log('[Error] JQuery UI is not defined.') }
     
-    live2d_settings.homePageUrl = live2d_settings.homePageUrl == 'auto' ? window.location.protocol+'//'+window.location.hostname+'/' : live2d_settings.homePageUrl;
+    live2d_settings.homePageUrl == 'auto' ? window.location.protocol+'//'+window.location.hostname+'/' : live2d_settings.homePageUrl;
     if (window.location.protocol == 'file:' && live2d_settings.modelAPI.substr(0,2) == '//') live2d_settings.modelAPI = 'http:'+live2d_settings.modelAPI;
     
     $('.waifu-tool .fui-home').click(function (){
@@ -261,14 +261,14 @@ function loadTipsMessage(result) {
         var text;
         if (window.location.href == live2d_settings.homePageUrl) {
             var now = (new Date()).getHours();
-            if (now > 23 || now <= 5) text = getRandText(result.waifu.hour_tips['t23-5']);
-            else if (now > 5 && now <= 7) text = getRandText(result.waifu.hour_tips['t5-7']);
-            else if (now > 7 && now <= 11) text = getRandText(result.waifu.hour_tips['t7-11']);
-            else if (now > 11 && now <= 14) text = getRandText(result.waifu.hour_tips['t11-14']);
-            else if (now > 14 && now <= 17) text = getRandText(result.waifu.hour_tips['t14-17']);
-            else if (now > 17 && now <= 19) text = getRandText(result.waifu.hour_tips['t17-19']);
-            else if (now > 19 && now <= 21) text = getRandText(result.waifu.hour_tips['t19-21']);
-            else if (now > 21 && now <= 23) text = getRandText(result.waifu.hour_tips['t21-23']);
+            if (now > 23 || now <= 5) text = getRandText(result.waifu.hour_tips.t23-5);
+            else if (now > 5 && now <= 7) text = getRandText(result.waifu.hour_tips.t5-7);
+            else if (now > 7 && now <= 11) text = getRandText(result.waifu.hour_tips.t7-11);
+            else if (now > 11 && now <= 14) text = getRandText(result.waifu.hour_tips.t11-14);
+            else if (now > 14 && now <= 17) text = getRandText(result.waifu.hour_tips.t14-17);
+            else if (now > 17 && now <= 19) text = getRandText(result.waifu.hour_tips.t17-19);
+            else if (now > 19 && now <= 21) text = getRandText(result.waifu.hour_tips.t19-21);
+            else if (now > 21 && now <= 23) text = getRandText(result.waifu.hour_tips.t21-23);
             else text = getRandText(result.waifu.hour_tips.default);
         } else {
             var referrer_message = result.waifu.referrer_message;
